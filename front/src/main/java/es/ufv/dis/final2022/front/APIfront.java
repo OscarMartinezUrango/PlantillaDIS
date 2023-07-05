@@ -20,7 +20,7 @@ public class APIfront {
     public String urlPrefix = "http://localhost:8888"; // Dirección donde se aloja el back
 
     // GET request
-    
+
     public List<Persona> getAllProductos() throws URISyntaxException, IOException, InterruptedException {
         String urlFull = urlPrefix + "/ObtenerProductos";
 
@@ -40,7 +40,7 @@ public class APIfront {
         return gson.fromJson(response.body(),tipo);
     }
 
-    public Persona getProducto(String nombre) throws URISyntaxException, IOException, InterruptedException {
+    public Persona getPersona(String nombre) throws URISyntaxException, IOException, InterruptedException {
         String urlFull = urlPrefix + "/EncontrarProducto/" + nombre;
 
         HttpRequest request = HttpRequest.newBuilder()
@@ -61,7 +61,7 @@ public class APIfront {
 
     // POST request
 
-    public Persona putProducto(String nombre, String  categoria, int precio, String ean13) throws IOException, InterruptedException {
+    public Persona putPersona(String nombre, String  categoria, int precio, String ean13) throws IOException, InterruptedException {
         String urlFull = urlPrefix + "/addProducto";
 
         var objectMapper = new ObjectMapper();
