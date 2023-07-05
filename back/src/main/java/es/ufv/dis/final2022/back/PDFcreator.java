@@ -15,9 +15,6 @@ public class PDFcreator {
 
 
 
-    public class PDFManager {
-
-
         public void generarPDF(List<Persona> productoList) {
             try {
                 Document doc = new Document(PageSize.A4, 50, 50, 100, 72);
@@ -33,5 +30,5 @@ public class PDFcreator {
                 e.printStackTrace();
             }
         }
-    }
+
 }
