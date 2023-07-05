@@ -8,8 +8,7 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.notification.NotificationVariant;
+
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -115,9 +114,7 @@ public class MainView extends VerticalLayout {
                     categoria_f.clear();
                     precio_f.clear();
                     ean13_f.clear();
-                    Notification notification = Notification.show("Producto Inválido");
-                    notification.setPosition(Notification.Position.BOTTOM_START);
-                    notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
+
                 }
                 else{
                     Persona new_prod = serviceAPI.putPersona(nombre_f.getValue(),categoria_f.getValue(), precio_f.getValue(), ean13_f.getValue());
@@ -128,17 +125,13 @@ public class MainView extends VerticalLayout {
                         categoria_f.clear();
                         precio_f.clear();
                         ean13_f.clear();
-                        Notification notification = Notification.show("Producto Introducido");
-                        notification.setPosition(Notification.Position.BOTTOM_START);
-                        notification.addThemeVariants(NotificationVariant.LUMO_SUCCESS);
+
                     } else {
                         nombre_f.clear();
                         categoria_f.clear();
                         precio_f.clear();
                         ean13_f.clear();
-                        Notification notification = Notification.show("Producto Repetido o Inválido");
-                        notification.setPosition(Notification.Position.BOTTOM_START);
-                        notification.addThemeVariants(NotificationVariant.LUMO_ERROR);
+
                     }
                 }
             } catch (IOException ex) {

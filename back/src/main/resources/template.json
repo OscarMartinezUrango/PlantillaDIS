@@ -4,5 +4,11 @@
     "categoria": "studiante",
     "precio": 3,
     "ean13": "0322500532677"
+  },
+  {
+    "nombre": "p",
+    "categoria": "p",
+    "precio": 1,
+    "ean13": "w"
   }
 ]
