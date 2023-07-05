@@ -10,11 +10,7 @@ import java.util.List;
 
 public class LectorArchivo {
 
-    /**
-     * Leemos los contenidos del archivo template.json y los almacenamos en una lista de productos
-     * @return Lista de Objetos (Producto)
-     * @since v0.2
-     */
+
     public List<Persona> leerJsonProductos(){
 
         try {
@@ -32,11 +28,7 @@ public class LectorArchivo {
         }
     }
 
-    /**
-     * Sobreescribimos el archivo template.json con la lista actualizada
-     * @param listaProductosActualizada Lista de Objetos (Producto) que sustituirá a la antigua
-     * @since v0.2
-     */
+
     public void actualizarJson (List<Persona> listaProductosActualizada){
 
         try {
